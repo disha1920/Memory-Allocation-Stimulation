@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Allocation Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Memory Allocation Simulator</h2>
+    <div id="input">
+        <label for="processSizes">Enter sizes of processes (comma-separated):</label>
+        <input type="text" id="processSizes" placeholder="Enter the size of process"><br>
+        <label for="blockSizes" >Enter sizes of memory blocks (comma-separated):</label>
+        <input type="text" id="blockSizes" placeholder="Enter the size of blocks"><br>
+        <button onclick="setup()">Setup</button>
+    </div>
+    <div id="simulation">
+        <div id="firstFitAllocation" class="blocks-container"></div>
+        <div id="unallocatedProcessesFirstFit" class="unallocate"></div>
+
+        <div id="bestFitAllocation" class="blocks-container"></div>
+        <div id="unallocatedProcessesBestFit" class="unallocate"></div>
+
+        <div id="worstFitAllocation" class="blocks-container"></div>
+        <div id="unallocatedProcessesWorstFit" class="unallocate"></div>
+
+        <div id="nextFitAllocation" class="blocks-container"></div>
+        <div id="unallocatedProcessesNextFit" class="unallocate"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
